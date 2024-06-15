@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.chongyu.norecipebook.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+  ],
+  "client": [
+    "TexturedButtonWidgetAssessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
