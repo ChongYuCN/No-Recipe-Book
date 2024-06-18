@@ -14,9 +14,8 @@ public class NoRecipeBookClient implements ClientModInitializer {
     public void onInitializeClient() {
         //配方书
         ScreenEvents.AFTER_INIT.register((client, screen, scaledWidth, scaledHeight) -> {
-            if(screen instanceof InventoryScreen inventoryScreen){
-                for (ClickableWidget button : Screens.getButtons(inventoryScreen) ){
-                    TexturedButtonWidget buttonWidget = (TexturedButtonWidget)button;
+            for (ClickableWidget button : Screens.getButtons(screen) ){
+                if(button instanceof TexturedButtonWidget buttonWidget){
 
 //                    System.out.println("======"+ ((TexturedButtonWidgetAssessor)buttonWidget).getTextures().disabled().toString());//minecraft:recipe_book/button
 //                    System.out.println("++++++"+ ((TexturedButtonWidgetAssessor)buttonWidget).getTextures().enabled().toString());//minecraft:recipe_book/button
